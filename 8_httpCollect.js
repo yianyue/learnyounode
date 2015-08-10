@@ -1,7 +1,8 @@
-// var bl = require('bl');
+var bl = require('bl');
 var http = require('http');
 
 var url = process.argv[2];
+
 // using bl
 
 // http.get(url, function(rsp){
@@ -13,7 +14,7 @@ var url = process.argv[2];
 
 // not using bl
 
-var req = http.get(url, function(rsp){
+http.get(url, function(rsp){
   var all = '';
   rsp.setEncoding('utf8');
   rsp.on('data', function(data){
